@@ -1,0 +1,11 @@
+<aura:component Controller="Aura_Search_Example">
+    <aura:attribute name="industry" type="String"/>;
+    <aura:attribute name="myAccounts" type="Account[]"/>
+    <lightning:input type="search" label="Search" name="search" value="{!v.industry}"/>
+	<lightning:button variant="brand" label="Submit" onclick="{!c.invoke}" />
+    <aura:iteration items="{!v.myAccounts}" var="a">
+    <br/>
+    <p>Name:{!a.Name}</p>
+	 <p>Phone:{!a.Phone}</p>
+    </aura:iteration>
+</aura:component>
